@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./media/assets/bg-desktop.jpg);
+  --bg-url: url(./media/assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -25,6 +25,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   /* O * é uma espécie de seletor unviersal */
@@ -63,7 +64,6 @@ body * {
   position: relative;
   width: 64px;
   margin: 4px auto;
-
 }
 
 #switch button {
@@ -80,7 +80,7 @@ body * {
   transition: translateY 0.2s;
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
@@ -95,8 +95,6 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
-
 }
 
 /* Links */
@@ -155,4 +153,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./media/assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./media/assets/bg-dekstop-light.jpg);
+  }
 }
